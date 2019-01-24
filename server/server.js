@@ -1,9 +1,16 @@
 require('dotenv').config()
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
+const cors = require('cors')
 const schema = require('./Schema/Schema')
 
 const app = express();
+
+
+// Allow Cross Orgin
+app.use(cors())
+
+
 
 app.use('/graphql', graphqlHTTP({
     schema,

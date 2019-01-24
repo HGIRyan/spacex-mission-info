@@ -17,12 +17,17 @@ const LaunchType = new GraphQLObjectType({
     })
 })
 
+// Rocket Type
 const RocketType = new GraphQLObjectType({
     name: 'Rocket',
     fields: () => ({
         rocket_id: { type: GraphQLString },
         rocket_name: { type: GraphQLString },
         rocket_type: { type: GraphQLString },
+        description: {type: GraphQLString},
+        meters: {type: GraphQLInt},
+        feet: {type: GraphQLInt}
+        // https://documenter.getpostman.com/view/2025350/RWaEzAiG#eda45a06-9f05-40f1-a333-028f647ba797
     })
 })
 
